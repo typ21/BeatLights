@@ -15,6 +15,7 @@ public class FullscreenFrame extends JFrame {
 	private static final long serialVersionUID = -56581405579835432L;
 
 //	private Haupt haupt;
+	private JPanel panelOfContent;
 
 	public FullscreenFrame(Haupt haupt) {
 //		this.haupt = haupt;
@@ -23,7 +24,7 @@ public class FullscreenFrame extends JFrame {
 		setUndecorated(true);
 		setExtendedState(MAXIMIZED_BOTH);
 
-		JPanel panelOfContent = new JPanel();
+		panelOfContent = new JPanel();
 //		panelOfContent.setLayout(null);
 		panelOfContent.setBackground(Color.BLACK);
 		setContentPane(panelOfContent);
@@ -44,45 +45,52 @@ public class FullscreenFrame extends JFrame {
 			@Override
 			public void keyPressed(KeyEvent arg0) {
 //				System.out.println(arg0.getKeyCode()+"|"+arg0.getExtendedKeyCode());
-				
+
 				switch (arg0.getExtendedKeyCode()) { // German keyboard layout
 				case 81:
 //					System.out.println("q");
 					panelOfContent.setBackground(Color.RED);
-					
-					panelOfContent.setBackground(Color.BLACK);
+					waitBlack();
 					break;
 				case 87:
 //					System.out.println("w");
 					panelOfContent.setBackground(Color.ORANGE);
+					waitBlack();
 					break;
 				case 69:
 //					System.out.println("e");
 					panelOfContent.setBackground(Color.YELLOW);
+					waitBlack();
 					break;
 				case 82:
 //					System.out.println("r");
 					panelOfContent.setBackground(Color.GREEN);
+					waitBlack();
 					break;
 				case 84:
 //					System.out.println("t");
 					panelOfContent.setBackground(Color.BLUE);
+					waitBlack();
 					break;
 				case 90:
 //					System.out.println("z");
 					panelOfContent.setBackground(Color.MAGENTA);
+					waitBlack();
 					break;
 				case 85:
 //					System.out.println("u");
 					panelOfContent.setBackground(Color.PINK);
+					waitBlack();
 					break;
 				case 73:
 //					System.out.println("i");
 					panelOfContent.setBackground(Color.WHITE);
+					waitBlack();
 					break;
 				case 79:
 //					System.out.println("o");
 					panelOfContent.setBackground(Color.GRAY);
+					waitBlack();
 					break;
 				case 80:
 //					System.out.println("p");
@@ -144,6 +152,28 @@ public class FullscreenFrame extends JFrame {
 				 */
 			}
 		});
+	}
+
+	private void waitBlack(long millis) {
+		Thread thread = new Thread(new Runnable() {
+
+			@Override
+			public void run() {
+				try {
+					Thread.sleep(millis);
+					panelOfContent.setBackground(Color.BLACK);
+				} catch (InterruptedException e) {
+					// TODO Auto-generated catch block
+					e.printStackTrace();
+				}
+
+			}
+		});
+		thread.start();
+	}
+
+	private void waitBlack() {
+		waitBlack(100);
 	}
 
 }
