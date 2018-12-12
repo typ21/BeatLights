@@ -1,2 +1,4 @@
 # BeatLights
+:warning: **EPILEPTIC WARNING! VERY BRIGHT AND RAPID ANIMATIONS CAN APPEAR IN THIS PROGRAM!** :warning:
+
 MusicLights 2.0
