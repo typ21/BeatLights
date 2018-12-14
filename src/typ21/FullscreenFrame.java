@@ -32,11 +32,48 @@ public class FullscreenFrame extends JFrame {
 		addKeyListener(new KeyAdapter() {
 			@Override
 			public void keyReleased(KeyEvent arg0) {
-				switch (arg0.getKeyCode()) {
+				switch (arg0.getExtendedKeyCode()) {
 				case 27:
 					haupt.disposeFFrame();
 					break;
 
+				case 81:
+//					System.out.println("q");
+					panelOfContent.setBackground(Color.BLACK);
+					break;
+				case 87:
+//					System.out.println("w");
+					panelOfContent.setBackground(Color.BLACK);
+					break;
+				case 69:
+//					System.out.println("e");
+					panelOfContent.setBackground(Color.BLACK);
+					break;
+				case 82:
+//					System.out.println("r");
+					panelOfContent.setBackground(Color.BLACK);
+					break;
+				case 84:
+//					System.out.println("t");
+					panelOfContent.setBackground(Color.BLACK);
+					break;
+				case 90:
+//					System.out.println("z");
+					panelOfContent.setBackground(Color.BLACK);
+					break;
+				case 85:
+//					System.out.println("u");
+					panelOfContent.setBackground(Color.BLACK);
+					break;
+				case 73:
+//					System.out.println("i");
+					panelOfContent.setBackground(Color.BLACK);
+					break;
+				case 79:
+//					System.out.println("o");
+					panelOfContent.setBackground(Color.BLACK);
+					break;
+					
 				default:
 					break;
 				}
@@ -50,47 +87,47 @@ public class FullscreenFrame extends JFrame {
 				case 81:
 //					System.out.println("q");
 					panelOfContent.setBackground(Color.RED);
-					waitBlack();
+//					waitBlack();
 					break;
 				case 87:
 //					System.out.println("w");
 					panelOfContent.setBackground(Color.ORANGE);
-					waitBlack();
+//					waitBlack();
 					break;
 				case 69:
 //					System.out.println("e");
 					panelOfContent.setBackground(Color.YELLOW);
-					waitBlack();
+//					waitBlack();
 					break;
 				case 82:
 //					System.out.println("r");
 					panelOfContent.setBackground(Color.GREEN);
-					waitBlack();
+//					waitBlack();
 					break;
 				case 84:
 //					System.out.println("t");
 					panelOfContent.setBackground(Color.BLUE);
-					waitBlack();
+//					waitBlack();
 					break;
 				case 90:
 //					System.out.println("z");
 					panelOfContent.setBackground(Color.MAGENTA);
-					waitBlack();
+//					waitBlack();
 					break;
 				case 85:
 //					System.out.println("u");
 					panelOfContent.setBackground(Color.PINK);
-					waitBlack();
+//					waitBlack();
 					break;
 				case 73:
 //					System.out.println("i");
 					panelOfContent.setBackground(Color.WHITE);
-					waitBlack();
+//					waitBlack();
 					break;
 				case 79:
 //					System.out.println("o");
 					panelOfContent.setBackground(Color.GRAY);
-					waitBlack();
+//					waitBlack();
 					break;
 				case 80:
 //					System.out.println("p");
